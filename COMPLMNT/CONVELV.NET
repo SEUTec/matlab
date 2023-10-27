@@ -1,0 +1,12 @@
+* Schematics Netlist *
+
+
+
+L_L1         $N_0001 $N_0002 200uH 
+C_C1         0 Vo 200uF 
+R_R1         0 Vo 10 
+Q_Q1         $N_0002 $N_0003 0 QbreakN 
+V_Vg         $N_0001 0 10V
+V_Vu         $N_0003 0  AC 1
++PULSE 1 0 10e-6 0.2e-6 0.2e-6 10e-6 20e-6
+D_D         $N_0002 Vo Dbreak 
